@@ -1,4 +1,4 @@
- Proyecto de Sitios Web
+# Proyecto de Sitios Web
 
 Este proyecto contiene cuatro ramas, cada una dedicada a un sitio web diferente. El desarrollo se realiza utilizando Astro, y se incluyen instrucciones para la instalación y uso de Tailwind CSS, React y TypeScript.
 
