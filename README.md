@@ -2,13 +2,6 @@
 
 Este proyecto contiene cuatro ramas, cada una dedicada a un sitio web diferente. El desarrollo se realiza utilizando Astro, y se incluyen instrucciones para la instalación y uso de Tailwind CSS, React y TypeScript.
 
-## Ramas del Proyecto
-
-- `Herramientas`: Contiene el código para el sitio web llamado Herramientas de Arquitectura de Seguridad.
-- `Ecuador`: Contiene el código para el sitio web llamado Ecuador Digital.
-- `Amenazas`: Contiene el código para el sitio web llamado Amenazas y Vulnerabilidades – Estadísticas.
-- `Tendencias`: Contiene el código para el sitio web llamado Tendencias Tecnológicas EC 2024.
-
 ## Tecnologías Utilizadas
 
 - **Astro**: Framework para la construcción de sitios web rápidos.
@@ -69,7 +62,7 @@ Asegúrate de tener instalados Node.js y npm en tu sistema.
     npm run dev
     ```
 
-2. Abre tu navegador y navega a `http://localhost:3000` para ver el sitio web en acción.
+2. Abre tu navegador y navega a `http://localhost:4321` para ver el sitio web en acción.
 
 ### Configuración de Tailwind CSS
 
