@@ -1,0 +1,139 @@
+<div
+  class="bg-gradient-to-br from-gray-900 via-gray-800 to-black p-6 rounded-2xl shadow-2xl sticky top-6 border border-gray-700"
+>
+  <h2
+    class="text-4xl font-extrabold text-orange-500 mb-8 pb-2 border-b border-gray-600 text-center uppercase"
+  >
+    Menú
+  </h2>
+  <ul class="space-y-6">
+    <!-- Opción 1 -->
+    <li>
+      <button
+        data-section="herramientas"
+        class="menu-button flex items-center gap-4 text-white hover:text-orange-500 bg-gray-800 hover:bg-gray-700 transition-all duration-300 p-4 rounded-xl shadow-md hover:shadow-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-orange-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M16.5 8.5l-5 5-5-5"></path>
+        </svg>
+        <span class="font-semibold tracking-wide"
+          >Herramientas de Arquitectura de Seguridad</span
+        >
+      </button>
+    </li>
+
+    <!-- Opción 2 -->
+    <li>
+      <button
+        data-section="ecuador-digital"
+        class="menu-button flex items-center gap-4 text-white hover:text-orange-500 bg-gray-800 hover:bg-gray-700 transition-all duration-300 p-4 rounded-xl shadow-md hover:shadow-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-orange-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 19l-7-7 7-7m6 14l7-7-7-7"></path>
+        </svg>
+        <span class="font-semibold tracking-wide">Ecuador Digital</span>
+      </button>
+    </li>
+
+    <!-- Opción 3 -->
+    <li>
+      <button
+        data-section="amenazas-vulnerabilidades"
+        class="menu-button flex items-center gap-4 text-white hover:text-orange-500 bg-gray-800 hover:bg-gray-700 transition-all duration-300 p-4 rounded-xl shadow-md hover:shadow-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-orange-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l-6 6-6-6"></path>
+        </svg>
+        <span class="font-semibold tracking-wide"
+          >Amenazas y Vulnerabilidades – Estadísticas</span
+        >
+      </button>
+    </li>
+
+    <!-- Opción 4 -->
+    <li>
+      <button
+        data-section="tendencias"
+        class="menu-button flex items-center gap-4 text-white hover:text-orange-500 bg-gray-800 hover:bg-gray-700 transition-all duration-300 p-4 rounded-xl shadow-md hover:shadow-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-orange-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 10h11M9 21l12-12"></path>
+        </svg>
+        <span class="font-semibold tracking-wide"
+          >Tendencias Tecnológicas EC 2024</span
+        >
+      </button>
+    </li>
+  </ul>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButtons =
+      document.querySelectorAll<HTMLButtonElement>("[data-section]");
+    const sections = document.querySelectorAll<HTMLElement>(".content-section");
+
+    // Agrega eventos a los botones del menú
+    menuButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const sectionId = button.getAttribute("data-section");
+
+        if (sectionId) {
+          // Oculta todas las secciones
+          sections.forEach((section) => section.classList.add("hidden"));
+
+          // Muestra la sección seleccionada
+          const targetSection = document.getElementById(sectionId);
+          if (targetSection) {
+            targetSection.classList.remove("hidden");
+            targetSection.scrollIntoView({ behavior: "smooth" });
+          } else {
+            console.error(`No se encontró la sección con id: ${sectionId}`);
+          }
+        } else {
+          console.error("El atributo data-section no está definido o es null.");
+        }
+      });
+    });
+  });
+</script>
